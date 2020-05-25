@@ -131,6 +131,7 @@ end
     state::Vars,
     aux::Vars,
     t::Real,
+    direction,
 )
     FT = eltype(state)
 
