@@ -120,6 +120,7 @@ function boundary_state!(
     state::Vars,
     aux::Vars,
     t::Real,
+    direction,
 )
     u = state.ρu / state.ρ
     return abs(dot(nM, u))
