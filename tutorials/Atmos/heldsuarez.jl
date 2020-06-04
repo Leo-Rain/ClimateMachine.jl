@@ -277,13 +277,20 @@ interpol = ClimateMachine.InterpolationConfiguration(
     resolution,
 );
 
-dgn_config = setup_dump_state_and_aux_diagnostics(
-    AtmosGCMConfigType(),
-    interval,
-    driver_config.name;
-    interpol = interpol,
-);
-
+dgn_config = [
+    setup_dump_state_diagnostics(
+        AtmosGCMConfigType(),
+        interval,
+        driver_config.name,
+        interpol = interpol,
+    ),
+    setup_dump_aux_diagnostics(
+        AtmosGCMConfigType(),
+        interval,
+        driver_config.name,
+        interpol = interpol,
+    ),
+];
 
 # ## Run the model
 # Finally, we can run the model using the physical setup and solvers from
