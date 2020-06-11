@@ -24,6 +24,7 @@ if generate_tutorials
             "Dry Rayleigh Bernard" => "Atmos/dry_rayleigh_benard.jl",
             "Dry Idealized GCM" => "Atmos/heldsuarez.jl",
             "Rising Thermal Bubble" => "Atmos/risingbubble.jl",
+            "Density Current" => "Atmos/densitycurrent.jl",
             "Microphysics" => [
                 "Saturation adjustment" =>
                     "Microphysics/ex_1_saturation_adjustment.jl",
@@ -64,6 +65,7 @@ if generate_tutorials
     skip_execute = [
         "Atmos/dry_rayleigh_benard.jl",               # takes too long
         "Atmos/risingbubble.jl",                      # broken
+        "Atmos/densitycurrent.jl",                    # broken
         "Numerics/DGMethods/nonnegative.jl",          # broken
         "Microphysics/ex_1_saturation_adjustment.jl", # too long
         "Microphysics/ex_2_Kessler.jl",               # too long
